@@ -8,7 +8,9 @@ module Subscribem
 
     def create
       account = Subscribem::Account.create(account_params)
-      flash[:success] = "Signed in as #{account.owner.email}."
+      env["warden"].set_user(account.owner,:scope=>:user)
+      env["warden"].set_user(account,:scope=>:account)
+      flash[:success] = "Your account has been successfully created."
       redirect_to subscribem.root_url
     end
 
