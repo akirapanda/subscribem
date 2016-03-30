@@ -73,4 +73,5 @@ feature "Account" do
     expect(page).to have_content("Sorry,your account could not be created.")
     expect(page).to have_content("Subdomain is not allowed.Please choose another subdomain.")
   end
+
 end

@@ -19,3 +19,4 @@ Warden::Strategies.add(:password)  do
     success! user
   end
 end
+
