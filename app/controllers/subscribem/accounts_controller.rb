@@ -7,9 +7,9 @@ module Subscribem
 
 
     def create
-      @account = Subscribem::Account.create(account_params)
+      @account = Subscribem::Account.create_with_owner(account_params)
 
-      if @account.save
+      if @account.valid?
         env["warden"].set_user(@account.owner,:scope=>:user)
         env["warden"].set_user(@account,:scope=>:account)
         flash[:success] = "Your account has been successfully created."
