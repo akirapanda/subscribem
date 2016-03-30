@@ -2,7 +2,10 @@ PATH
   remote: .
   specs:
     subscribem (0.0.1)
+      bcrypt
+      dynamic_form
       rails (~> 4.2.6)
+      warden
 
 GEM
   remote: https://ruby.taobao.org/
@@ -55,6 +58,7 @@ GEM
       xpath (~> 2.0)
     concurrent-ruby (1.0.1)
     diff-lcs (1.2.5)
+    dynamic_form (1.1.4)
     erubis (2.7.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -137,12 +141,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcrypt
   capybara
   rspec-rails
   sqlite3
   subscribem!
-  warden
 
 BUNDLED WITH
    1.11.2
